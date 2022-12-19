@@ -1,8 +1,8 @@
 import './App.css';
-import { ClickCounter } from './components/ClickCounter';
+import { ClickTracker } from './components/ClickTracker';
 
 function App() {
-  return <ClickCounter />;
+  return <ClickTracker />;
 }
 
 export default App;
