@@ -16,7 +16,8 @@ export class ClickTracker extends React.Component {
     render() {
         return (
             <div>
-                <h1>Clicked: {this.state.lastClickedBtn}!</h1>
+                {!!this.state.lastClickedBtn 
+                    && <h1>Clicked: {this.state.lastClickedBtn}!</h1>}
                 <button onClick={this.lastClickedButton}>
                     <img src={require('../images/charizard.png')}
                         alt='Charizard' />
