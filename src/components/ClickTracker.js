@@ -7,7 +7,10 @@ export class ClickTracker extends React.Component {
     };
 
     lastClickedButton = (event) => {
-        this.setState({lastClickedBtn: event.target.alt});
+        if (event.target.alt)
+            this.setState({lastClickedBtn: event.target.alt});
+        else
+            this.setState({lastClickedBtn: event.target.firstChild.alt});
     }
 
     render() {
