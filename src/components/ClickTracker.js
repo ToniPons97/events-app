@@ -7,16 +7,25 @@ export class ClickTracker extends React.Component {
     };
 
     lastClickedButton = (event) => {
-        this.setState({lastClickedBtn: event.target.innerText});
+        this.setState({lastClickedBtn: event.target.alt});
     }
 
     render() {
         return (
             <div>
-                <h1>Clicked {this.state.lastClickedBtn}!</h1>
-                <button onClick={this.lastClickedButton}>Button 1</button>
-                <button onClick={this.lastClickedButton}>Button 2</button>
-                <button onClick={this.lastClickedButton}>Button 3</button>
+                <h1>Clicked: {this.state.lastClickedBtn}!</h1>
+                <button onClick={this.lastClickedButton}>
+                    <img src={require('../images/charizard.png')}
+                        alt='Charizard' />
+                </button>
+                <button onClick={this.lastClickedButton}>
+                    <img src={require('../images/gengar.png')} 
+                        alt='Gengar' />
+                </button>
+                <button onClick={this.lastClickedButton}>
+                    <img src={require('../images/hariyama.png')} 
+                        alt='Hariyama'/>
+                </button>
             </div>
         );
     }
