@@ -1,5 +1,5 @@
 import './App.css';
-import { ClickCounter } from './components/ClickCounter';
+import ClickCounter from './components/ClickCounter';
 
 function App() {
   return <ClickCounter />;
