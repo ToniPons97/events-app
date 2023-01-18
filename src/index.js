@@ -5,6 +5,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { store } from './state/Store';
 import { incrementCounter } from './state/CounterState';
+import { addTodo } from './state/TodosState';
+import { addUser } from './state/UsersState';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 /*
@@ -15,11 +17,18 @@ root.render(
 );
 */
 
-store.subscribe(() => console.log('redux state: ' + store.getState()));
+store.subscribe(() => console.log(store.getState()));
 store.dispatch(incrementCounter(5));
 store.dispatch(incrementCounter(5));
+
+store.dispatch(addTodo({id: 1, todo: 'Learn Redux', completed: false}));
+store.dispatch(addTodo({id: 2, todo: 'Learn HTML', completed: true}));
+
+store.dispatch(addUser({id: 1, user: 'Jimmy', age: 37}));
+
 store.dispatch(incrementCounter(5));
 store.dispatch(incrementCounter(5));
+
 
 
 // If you want to start measuring performance in your app, pass a function
