@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 // This is the same as actions in CounterState.js, but done using Redux Toolkit library.
-export const counter2State = createSlice({
+export const counterState2 = createSlice({
     name: 'counter2',
     initialState: 0,
     reducers: {
