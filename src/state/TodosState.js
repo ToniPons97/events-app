@@ -29,7 +29,7 @@ export const editTodo = (id, data) => {
     }
 }
 
-export const clearTodo = () => { type: CLEAR };
+export const clearTodo = () => {return { type: CLEAR }};
 
 
 export const todosReducer = (state = defaultState, action) => {
